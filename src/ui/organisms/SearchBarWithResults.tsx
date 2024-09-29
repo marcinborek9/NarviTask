@@ -46,11 +46,7 @@ export const SearchBarWithResults = () => {
 	};
 
 	const mergedData =
-		data?.pages.reduce<GetUsersResponse['items']>((acc, currentItem) => {
-			console.log('acc', acc);
-			console.log('currentItem.data', currentItem.data);
-			return [...acc, ...currentItem.data];
-		}, []) ?? [];
+		data?.pages.reduce<GetUsersResponse['items']>((acc, currentItem) => [...acc, ...currentItem.data], []) ?? [];
 
 	return (
 		<>
