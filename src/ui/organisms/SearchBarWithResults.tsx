@@ -57,7 +57,7 @@ export const SearchBarWithResults = () => {
 				}
 				anchorOrigin={{ horizontal: 'center', vertical: 'bottom' }}
 				autoHideDuration={5000}
-				key={''}
+				key={`error-${Date.now()}`}
 			/>
 			<SearchInput value={query} onChange={(event) => setQuery(event.target.value)} />
 			{isLoading && !isError && <LinearProgress />}
