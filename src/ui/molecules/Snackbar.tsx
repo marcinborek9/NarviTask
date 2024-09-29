@@ -11,8 +11,6 @@ interface SnackbarProps {
 export const Snackbar = ({ open, message, anchorOrigin, autoHideDuration }: SnackbarProps) => {
 	const [isOpen, setIsOpen] = useState(open);
 
-	console.log('message', message);
-
 	return (
 		<MUISnackbar
 			open={isOpen}
